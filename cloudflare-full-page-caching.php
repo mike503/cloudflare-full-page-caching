@@ -55,7 +55,7 @@ add_action('edit_post', '_cloudflare_full_page_caching_purge_urls');
 add_action('delete_attachment', '_cloudflare_full_page_caching_purge_urls');
 */
 
-function _cloudflare_full_page_caching_purge_urls($null, $null, $post) {
+function _cloudflare_full_page_caching_purge_urls($a, $b, $post) {
   if (!$zone_id = _cloudflare_full_page_caching_zone_id()) {
 // could add message
     return FALSE;
