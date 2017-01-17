@@ -13,7 +13,7 @@ add_filter('edit_post_link', '__return_null');
 
 // FULL-SITE EVENT PURGES
 add_action('autoptimize_action_cachepurged', '_cloudflare_full_page_caching_purge_zone');
-add_action('switch_theme', '_cloudflare_full_page_caching_zone');
+add_action('switch_theme', '_cloudflare_full_page_caching_purge_zone');
 add_action('admin_bar_menu', '_cloudflare_full_page_caching_adminbar', 100);
 if (isset($_GET['cloudflare_full_page_caching_purge_zone'])) {
   add_action('admin_notices' , '_cloudflare_full_page_caching_purge_zone');
